@@ -1,0 +1,229 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after {
+  content: '';
+  content: none; }
+
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+@font-face {
+  font-family: 'Digital';
+  src: url("../fonts/digital/digital-7.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal; }
+.slider {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow-y: scroll;
+  background: #e8a765; }
+  .slider [class*="-section-"] {
+    display: none;
+    height: 100%;
+    width: 100%;
+    transition: 1s;
+    overflow: hidden; }
+  .slider .visible {
+    display: block; }
+  .slider .slide-section-1 {
+    background-color: #fd9a35; }
+  .slider .slide-section-2 {
+    background-color: #9097e6; }
+  .slider .slide-section-3 {
+    background-color: #31c349; }
+  .slider #teapot {
+    width: 500px;
+    height: 100vh;
+    position: relative;
+    margin: auto;
+    display: table;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    transition: 1s; }
+    .slider #teapot .content {
+      display: table-cell;
+      vertical-align: middle; }
+      .slider #teapot .content .wrap-tea {
+        position: relative; }
+      .slider #teapot .content .teapot {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        z-index: 5; }
+        .slider #teapot .content .teapot img {
+          width: 100%; }
+      .slider #teapot .content .back {
+        z-index: 1;
+        width: 200px;
+        height: 400px;
+        background-color: #c4c4c4;
+        position: absolute;
+        bottom: 20px;
+        left: 115px; }
+      .slider #teapot .content .water {
+        z-index: 2;
+        width: 200px;
+        height: 300px;
+        background-color: #6bb5e0;
+        position: absolute;
+        bottom: 20px;
+        left: 115px;
+        overflow: hidden; }
+        .slider #teapot .content .water .bubble {
+          transition: 1s; }
+        .slider #teapot .content .water .bubble.boiling {
+          width: 30px;
+          height: 30px;
+          position: absolute;
+          bottom: 80px;
+          border-radius: 50%;
+          box-shadow: 2px 2px 2px 2px white inset; }
+        .slider #teapot .content .water .bubble.boiling:nth-child(1) {
+          left: 50px;
+          animation: boiling 2s 0.5s infinite ease-in; }
+        .slider #teapot .content .water .bubble.boiling:nth-child(2) {
+          left: 70px;
+          animation: boiling 2s 1.8s infinite ease-in; }
+        .slider #teapot .content .water .bubble.boiling:nth-child(3) {
+          left: 85px;
+          animation: boiling 2s 1s infinite ease-in; }
+        .slider #teapot .content .water .bubble.boiling:nth-child(4) {
+          left: 100px;
+          animation: boiling 2s 1.6s infinite ease-in; }
+      .slider #teapot .content .display {
+        width: 160px;
+        height: 90px;
+        background: #6bb5e0;
+        position: absolute;
+        top: 48px;
+        left: 124px;
+        border-radius: 5px;
+        z-index: 6;
+        box-shadow: 1px 1px 2px 0px inset; }
+        .slider #teapot .content .display h1 {
+          text-align: center;
+          text-transform: uppercase;
+          font-family: 'Digital';
+          font-size: 70px; }
+        .slider #teapot .content .display h3 {
+          text-align: center;
+          font-family: 'Digital'; }
+      .slider #teapot .content .social {
+        width: 80px;
+        height: 150px;
+        position: absolute;
+        left: 39px;
+        bottom: 188px;
+        z-index: 6; }
+        .slider #teapot .content .social li {
+          width: 50px;
+          height: 50px;
+          margin-bottom: 10px; }
+          .slider #teapot .content .social li img {
+            width: 100%;
+            height: 100%; }
+      .slider #teapot .content .power {
+        width: 60px;
+        height: 60px;
+        position: absolute;
+        z-index: 6;
+        bottom: 12px;
+        left: 175px;
+        display: block; }
+        .slider #teapot .content .power img {
+          width: 100%;
+          height: 100%;
+          background: orange;
+          border-radius: 50%;
+          transition: 1s;
+          box-shadow: 0px 0px 7px 0px black; }
+          .slider #teapot .content .power img:hover {
+            transition: 1s;
+            background: red; }
+      .slider #teapot .content .active img {
+        background: lime; }
+      .slider #teapot .content .on img {
+        background: red;
+        transition: 1s; }
+      .slider #teapot .content .on:hover img {
+        background: lime;
+        transition: 1s; }
+    @media (max-width: 720px) {
+      .slider #teapot {
+        transform: scale(0.5, 0.5);
+        transition: 1s; } }
+
+.control {
+  height: 100vh;
+  width: 100px;
+  position: fixed;
+  right: 20px;
+  top: 0;
+  display: table;
+  vertical-align: middle;
+  z-index: 10000; }
+  .control ul {
+    height: 200px;
+    display: table-cell;
+    vertical-align: middle; }
+    .control ul li {
+      display: inline-block;
+      width: 30px;
+      height: 30px;
+      border: 10px #824b1b solid;
+      border-radius: 50%;
+      background-color: #50f16c;
+      margin: 10px;
+      box-shadow: 1px 1px 2px 0px inset,2px 2px 0px 0px;
+      transition: .3s; }
+      .control ul li:hover {
+        box-shadow: 1px 1px 2px 0px inset,0px 0px 0px 0px;
+        transition: .3s;
+        transform: translateY(2px); }
+      .control ul li a {
+        display: block;
+        width: 100%;
+        height: 100%; }
+      .control ul li.active {
+        background-color: #fd8f0e; }
+
+@keyframes boiling {
+  0% {
+    transform: scale(0.5, 0.5) translate(0px, 0px); }
+  100% {
+    transform: scale(1.1, 1.1) translate(0px, -150px); } }
+.hideSlide {
+  overflow: hidden;
+  position: relative;
+  left: 0;
+  top: 0;
+  height: 0px !important;
+  opacity: 0;
+  transition: 1s; }
+
+/*# sourceMappingURL=style.css.map */
